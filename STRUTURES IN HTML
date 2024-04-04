@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structures in HTML</title>
+<script>
+  // Define a structure using JavaScript object
+  const person = {
+    name: "John Doe",
+    age: 30,
+    address: {
+      street: "123 Main St",
+      city: "Anytown",
+      state: "CA"
+    }
+  };
+
+  // Access and display structure data
+  function displayPerson() {
+    document.getElementById("name").innerText = "Name: " + person.name;
+    document.getElementById("age").innerText = "Age: " + person.age;
+    document.getElementById("address").innerText = "Address: " + person.address.street + ", " + person.address.city + ", " + person.address.state;
+  }
+</script>
+</head>
+<body>
+  <h1>Person Information</h1>
+  <div id="personInfo">
+    <p id="name">Name: </p>
+    <p id="age">Age: </p>
+    <p id="address">Address: </p>
+  </div>
+  <button onclick="displayPerson()">Display Person</button>
+</body>
+</html>
