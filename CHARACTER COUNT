@@ -1,0 +1,96 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Character Count</title>
+    <script>
+        function countCharacters() {
+            var input = document.getElementById("textInput").value;
+            var count = input.length;
+            alert("Number of characters: " + count);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="countCharacters()">Count Characters</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count</title>
+    <script>
+        function countWords() {
+            var input = document.getElementById("textInput").value;
+            var words = input.split(" ");
+            var count = words.length;
+            alert("Number of words: " + count);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Enter sentence">
+    <button onclick="countWords()">Count Words</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel Count</title>
+    <script>
+        function countVowels() {
+            var input = document.getElementById("textInput").value;
+            var count = input.match(/[aeiou]/gi).length;
+            alert("Number of vowels: " + count);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="countVowels()">Count Vowels</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digit Count</title>
+    <script>
+        function countDigits() {
+            var input = document.getElementById("numberInput").value;
+            var count = input.replace(/\D/g, "").length;
+            alert("Number of digits: " + count);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="numberInput" placeholder="Enter number">
+    <button onclick="countDigits()">Count Digits</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Option Count</title>
+    <script>
+        function countOptions() {
+            var select = document.getElementById("dropdown");
+            var count = 0;
+            for (var i = 0; i < select.options.length; i++) {
+                if (select.options[i].selected) {
+                    count++;
+                }
+            }
+            alert("Number of selected options: " + count);
+        }
+    </script>
+</head>
+<body>
+    <select id="dropdown" multiple>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+    </select>
+    <button onclick="countOptions()">Count Selected Options</button>
+</body>
+</html>
