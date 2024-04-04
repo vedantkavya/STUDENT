@@ -1,0 +1,42 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scope Resolution Operator </title>
+<script>
+  // Enum declaration
+  const DaysOfWeek = {
+    MONDAY: 1,
+    TUESDAY: 2,
+    WEDNESDAY: 3,
+    THURSDAY: 4,
+    FRIDAY: 5,
+    SATURDAY: 6,
+    SUNDAY: 7
+  };
+
+  // Function using scope resolution operator and simple manipulators
+  function greet(day) {
+    switch(day) {
+      case DaysOfWeek.MONDAY:
+        console.log("It's Monday! Let's start the week strong!");
+        break;
+      case DaysOfWeek.FRIDAY:
+        console.log("It's Friday! Time to celebrate!");
+        break;
+      default:
+        console.log("Enjoy your day!");
+    }
+  }
+</script>
+</head>
+<body>
+  <h1>Scope Resolution Operator </h1>
+  <button onclick="greet(DaysOfWeek.MONDAY)">Greet on Monday</button>
+  <button onclick="greet(DaysOfWeek.FRIDAY)">Greet on Friday</button>
+  <button onclick="greet(DaysOfWeek.SATURDAY)">Greet on Saturday</button>
+  <button onclick="greet(DaysOfWeek.SUNDAY)">Greet on Sunday</button>
+
+</body>
+</html>
