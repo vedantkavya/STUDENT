@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Concepts in html</title>
+<script>
+  // Function with call by reference
+  function changeValue(arr) {
+    arr[0] = 10; // Changes the value of the array element
+  }
+
+  // Function with return by reference
+  function getArray() {
+    return [1, 2, 3]; // Returns an array by reference
+  }
+
+  // Function with default argument
+  function greet(name = "Guest") {
+    return "Hello, " + name + "!";
+  }
+
+  // Function with constant argument
+  function calculateArea(radius) {
+    const PI = 3.14; // Constant value
+    return PI * radius * radius;
+  }
+
+  // Inline function
+  const double = function(x) { return x * 2; }
+
+  // Function overloading
+  function add(x, y) {
+    if (typeof y === 'undefined') { // If only one argument is provided
+      return x;
+    } else {
+      return x + y;
+    }
+  }
+</script>
+</head>
+<body>
+  <h1>Function Concepts in JavaScript</h1>
+  <p>Original array: <span id="originalArray"></span></p>
+  <p>Updated array: <span id="updatedArray"></span></p>
+  <p>Greeting: <span id="greeting"></span></p>
+  <p>Area of circle: <span id="area"></span></p>
+  <p>Double of 5: <span id="double"></span></p>
+  <p>Sum of 5 and 3: <span id="sum"></span></p>
+
+<script>
+  // Call by reference
+  let array = [1, 2, 3];
+  document.getElementById("originalArray").innerText = array.toString();
+  changeValue(array);
+  document.getElementById("updatedArray").innerText = array.toString();
+
+  // Return by reference
+  let returnedArray = getArray();
+  console.log(returnedArray);
+
+  // Default argument
+  document.getElementById("greeting").innerText = greet();
+
+  // Constant argument
+  document.getElementById("area").innerText = calculateArea(5);
+
+  // Inline function
+  document.getElementById("double").innerText = double(5);
+
+  // Function overloading
+  document.getElementById("sum").innerText = add(5, 3);
+</script>
+</body>
+</html>
